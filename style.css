@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Digital";
+    src: url(digital-7.ttf) format("truetype");
+}
+
+.content {
+    background-color: black;
+    position: relative;
+    align-content: center;
+    width: 99%;
+    height: 100%;
+}
+
+.message {
+    background-color: black;
+    color: lightgrey;
+    font-size: 9pt;
+    font-weight: bold;
+    font-family: "Courier New";
+    padding-left: 20px;
+}
+
+.tickingbomb {
+    background-color: white;
+    position: relative;
+    width:100%;
+    bottom: 0;
+}
+
+.clock {
+    font-family: "Digital", Courrier, Tahoma;
+    color: red;
+    font-size: 40pt;
+    position: absolute;
+    left: 46%;
+    top: 28%;
+}
+
+#bomb {
+    /*position: absolute;*/
+}
+
+#flash {
+    position: absolute;
+    top: 10%;
+    left:30%;
+}

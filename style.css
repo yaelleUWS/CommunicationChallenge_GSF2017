@@ -33,7 +33,7 @@
     font-size: 40pt;
     position: absolute;
     left: 46%;
-    top: 28%;
+    top: 27%;
 }
 
 #bomb {
@@ -41,7 +41,17 @@
 }
 
 #flash {
-    position: absolute;
+    /*position: absolute;
     top: 10%;
-    left:30%;
+    left:30%;*/
+    align: center;
+}
+
+#cmd {
+    height: 650px;
+}
+
+#cmdLine {
+    overflow: auto;
+    max-height: 100%;
 }

@@ -14,8 +14,17 @@ var lose = new Audio('lose.wav');
 var challengeWon = false;
 
 // Set the date we're counting down to
-var countDown = 0.5 * 60 * 1000;
+var countDown = 20 * 60 * 1000;
 var countDownTo = new Date().getTime() + countDown;
+
+document.getElementById("deadline_hour").value = new Date (countDownTo).getHours();
+document.getElementById("deadline_min").value = new Date (countDownTo).getMinutes();
+
+function updateCountdown(){
+    countDownTo = new Date();
+    countDownTo.setHours(document.getElementById("deadline_hour").value);
+    countDownTo.setMinutes(document.getElementById("deadline_min").value);
+}
 
 // Update the count down every 1 second
 var bombTicking = setInterval(function() {
@@ -73,13 +82,15 @@ for (var i = 0, len = msg.length; i < len; i++) {
     msg_binary.push(binaryLetter);
 }
 
+console.log(msg_binary);
+
 
 var letter = 0;
 var index = 0;
 var cursor = document.getElementById("cursor");
 // play message in loop
 var msgLoop = setInterval(function() {
-    if (letter === 0 && index === 0)
+    if (letter === 0 && index === -1)
     {
         document.getElementById("flash").style.display = 'none';
         beep.play();
@@ -94,15 +105,16 @@ var msgLoop = setInterval(function() {
         tick.play();
     }
 
-    if(index === 8)
+    if(index === 7)
     {
         if (letter === msg_binary.length -1)
         {
             letter = 0;
+            index  = -1;
         } else {
             letter++;
+            index  = 0;
         }
-        index  = 0;
     } else {
         index++;
     }
@@ -167,7 +179,7 @@ document.onkeypress = function (e) {
             {
                 document.getElementById("answer").innerHTML +=
                     "C:\\Users\\Hope\\SaveTheWorld > " + code.innerHTML + "<br/>"+
-                    "That's so polite! Here goes what you are looking for: <br/>517<br/><br/>";
+                    "That's so polite! Here goes what you are looking for: <br/>851<br/><br/>";
                 code.innerHTML = "";
                 clearInterval(bonusLoop);
             }
@@ -184,7 +196,7 @@ document.onkeypress = function (e) {
 
                 document.getElementById("answer").innerHTML +=
                     "C:\\Users\\Hope\\SaveTheWorld > " + code.innerHTML + "<br/>"+
-                    "Nope, '"+textTranslated+"' is not what I was expecting...<br/>";
+                    "Nope, '"+textTranslated+"' is not what I was expecting... Think, one word, 5 letters...<br/><br/>";
                 code.innerHTML = "";
             }
         }

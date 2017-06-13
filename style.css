@@ -14,7 +14,7 @@
 .message {
     background-color: black;
     color: lightgrey;
-    font-size: 9pt;
+    font-size: 10pt;
     font-weight: bold;
     font-family: "Courier New";
     padding-left: 20px;
@@ -35,6 +35,14 @@
     left: 46%;
     top: 27%;
 }
+.clock_p116 {
+    font-family: "Digital", Courrier, Tahoma;
+    color: red;
+    font-size: 28pt;
+    position: absolute;
+    left: 46%;
+    top: 22%;
+}
 
 #bomb {
     /*position: absolute;*/
@@ -49,6 +57,9 @@
 
 #cmd {
     height: 650px;
+}
+#cmd_p116 {
+    height: 590px;
 }
 
 #cmdLine {

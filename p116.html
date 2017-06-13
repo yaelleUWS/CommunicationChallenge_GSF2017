@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Communication Challenge</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="content">
+<div class="message">
+    <table border="0" width="98%" align="center">
+        <tr><td width="60%" valign="top">
+            <div id="cmd_p116"><div id="cmdLine">
+            Microsoft Windows [Version 22.5.2066] <br/>
+            Copyright (c) 2066 Microsoft Corporation. All rights reserved.<br/>
+            <br/>
+            <br/>
+            C:\Users\Hope >  echo "Please enter code before bomb explodes"<br/>
+            "Please enter code before bomb explodes"<br/>
+            <br/>
+            C:\Users\Hope >  cd SaveTheWorld <br/>
+            <br/>
+            C:\Users\Hope\SaveTheWorld >  help <br/>
+            <br/>
+            C:\Users\Hope\SaveTheWorld >  echo "type in code to save the world!!!" <br/>
+            "type in code to save the world!!!"<br/>
+            <br/><span id="answer"></span>
+                <span id="allowInput">C:\Users\Hope\SaveTheWorld > <span id="code"></span><span id="cursor"><b>_</b></span></span>
+            <br/><br/>
+            </div></div>
+        </td><td valign="top" align="center" width="40%">
+            <br/><br/><br/><br/><br/><br/><br/>
+            <img id="flash" src="white_dot.jpg" align="center" width="100%">
+        </td></tr>
+    </table>
+</div>
+<div class="tickingbomb">
+    <img id="bomb" src="bg.png" alt="ticking bomb" width="100%"/>
+    <span class="clock_p116" id="timer">00:00</span>
+    <input type="text" id="deadline_hour" onchange="updateCountdown()" />
+    <input type="text" id="deadline_min" onchange="updateCountdown()" />
+</div>
+
+</body>
+<script src="codedMessage.js"></script>
+</html>

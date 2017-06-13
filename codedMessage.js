@@ -147,7 +147,7 @@ document.onkeypress = function (e) {
                 cursor.style.display = (cursor.style.display == 'none' ? '' : 'none');
             }, 1000);
         }
-        else if (code.innerHTML !== msg && !challengeWon) {
+        else if ((code.innerHTML === 714 || code.innerHTML === 825 ) && !challengeWon) {
             document.getElementById("answer").innerHTML +=
                 "C:\\Users\\Hope\\SaveTheWorld > " + code.innerHTML + "<br/><br/>";
             code.innerHTML = "";
@@ -183,8 +183,21 @@ document.onkeypress = function (e) {
                 }
 
                 document.getElementById("answer").innerHTML +=
-                    "C:\\Users\\Hope\\SaveTheWorld > " + code.innerHTML + "<br/>"+
-                    "Nope, '"+textTranslated+"' is not what I was expecting...<br/>";
+                    "C:\\Users\\Hope\\SaveTheWorld > " + code.innerHTML + "<br/>";
+
+                var Notbinary = code.innerHTML.replace(/1/g, "");
+                var Notbinary = Notbinary.replace(/0/g, "");
+                console.log(Notbinary);
+
+                if (Notbinary.length > 0)
+                {
+                    document.getElementById("answer").innerHTML +=
+                        "You are not using my language...<br/><br/>";
+                } else {
+                    document.getElementById("answer").innerHTML +=
+                        "Nope, '"+textTranslated+"' is not what I was expecting...<br/><br/>";
+                }
+
                 code.innerHTML = "";
             }
         }

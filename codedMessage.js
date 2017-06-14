@@ -24,6 +24,13 @@ function updateCountdown(){
     countDownTo = new Date();
     countDownTo.setHours(document.getElementById("deadline_hour").value);
     countDownTo.setMinutes(document.getElementById("deadline_min").value);
+
+    msg = document.getElementById("codeToFind").value;
+
+    document.getElementById("deadline_hour").style.display = 'none';
+    document.getElementById("deadline_min").style.display = 'none';
+    document.getElementById("codeToFind").style.display = 'none';
+
 }
 
 // Update the count down every 1 second

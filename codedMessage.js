@@ -186,7 +186,7 @@ document.onkeypress = function (e) {
             {
                 document.getElementById("answer").innerHTML +=
                     "C:\\Users\\Hope\\SaveTheWorld > " + code.innerHTML + "<br/>"+
-                    "That's so polite! Here goes what you are looking for: <br/>851<br/><br/>";
+                    "That's so polite! Here goes what you are looking for: <br/>714<br/><br/>";
                 code.innerHTML = "";
                 clearInterval(bonusLoop);
             }
